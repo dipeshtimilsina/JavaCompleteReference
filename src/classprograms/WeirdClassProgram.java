@@ -1,4 +1,4 @@
-package ClassPrograms;
+package classprograms;
 class WeirdBox{
     double height;
     double length;

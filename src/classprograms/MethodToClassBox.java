@@ -1,4 +1,4 @@
-package ClassPrograms;
+package classprograms;
 
 class Boxx{
     double height;

@@ -1,4 +1,4 @@
-package ClassPrograms;
+package classprograms;
 
 class Stack{
     int stck[]= new int[10];

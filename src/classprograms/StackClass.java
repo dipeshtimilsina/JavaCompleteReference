@@ -1,50 +1,64 @@
 package classprograms;
 
+//This class defines a stack that can hold 10 values
+
 class Stack{
     int stck[]= new int[10];
-    int tos;
+    int tos; //top of stack
 
-    //Initialize top-of-stack
+    //Initialize the top-of stack
     Stack(){
-        tos= -1;
+        tos=-1;
     }
 
-    //Push an item onto the stack
+    //Push an item into the stack
     void push (int item){
-        if (tos==9)
-            System.out.println("Stack is full");
-        else
+        if (tos==9){
+            System.out.println("Stack Full");
+        }
+        else{
             stck[++tos]= item;
+        }
     }
 
     //Pop an item from the stack
     int pop(){
-        if (tos<0){
+        if (tos<0) {
             System.out.println("Stack underflow");
             return 0;
         }
         else
             return stck[tos--];
     }
+
 }
-public class StackClass {
+
+public class StackClass{
     public static void main(String[] args) {
-        Stack mystack1= new Stack();
-        Stack mystack2= new Stack();
+        Stack myStack1= new Stack();
+        Stack myStack2= new Stack();
 
-        //push some numbers onto the stack
-        for (int i=0; i<10; i++)
-            mystack1.push(i);
-        for (int i=10; i<20; i++)
-            mystack2.push(i);
+        //push some numbers into the stack
 
-        //pop those numbers off the stack
-        System.out.println("Stack in mystack1: ");
         for (int i=0;i<10;i++){
-            System.out.println(mystack1.pop());
+            myStack1.push(i);
         }
-        System.out.println("Stack in mystack2: ");
-        for (int i=0;i<10;i++)
-            System.out.println(mystack2.pop());
+        for (int i=10; i<20;i++){
+            myStack2.push(i);
+        }
+
+        //Pop these numbers off the stack
+
+        System.out.println("Stack in my first stack1");
+        for (int i=0; i<10; i++){
+            System.out.println(myStack1.pop());
+        }
+        System.out.println();
+        System.out.println("Stack in my second stack2");
+        for (int i=10; i<20;i++){
+            System.out.println(myStack2.pop());
+        }
     }
 }
+
+

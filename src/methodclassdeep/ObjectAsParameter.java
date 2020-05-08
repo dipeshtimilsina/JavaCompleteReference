@@ -24,7 +24,7 @@ public class ObjectAsParameter {
         Test ob3= new Test (4,5);
 
         System.out.println("ob1==ob2: "+ ob1.equalTo(ob2));
-        System.out.println("ob1== ob3: "+ ob1.equalTo(ob3));
+        System.out.println("ob1== ob3: "+ ob1.equalTo(ob3)); //back on track
 
     }
 }

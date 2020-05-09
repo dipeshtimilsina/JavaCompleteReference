@@ -1,30 +1,29 @@
-package methodclassdeep;
-//It is both correct and common to use object as parameter in a program
+//package methodclassdeep;
+////It is both correct and common to use object as parameter in a program
 
+package methodclassdeep;
 class Test{
     int a,b;
-
-    Test (int a,int b){
+    Test (int a, int b){
         this.a=a;
         this.b=b;
     }
 
-    //return true if o is equal to invoking object
-    boolean equalTo (Test o){
-        if (o.a==a && o.b==b)
+    boolean isEqual(Test ob){
+        if(ob.a== a && ob.b==b){
             return true;
+        }
         else
             return false;
     }
 }
+
 public class ObjectAsParameter {
     public static void main(String[] args) {
-        Test ob1= new Test(100,22);
-        Test ob2= new Test (100,22);
-        Test ob3= new Test (4,5);
-
-        System.out.println("ob1==ob2: "+ ob1.equalTo(ob2));
-        System.out.println("ob1== ob3: "+ ob1.equalTo(ob3)); //back on track
-
+        Test t1 = new Test(4, 5);
+        Test t2= new Test (3,5);
+        Test t3= new Test (4,5);
+        System.out.println("t1=t2 >> "+ t1.isEqual(t2) );
+        System.out.println("t1=t3 >> "+ t1.isEqual(t3));
     }
 }

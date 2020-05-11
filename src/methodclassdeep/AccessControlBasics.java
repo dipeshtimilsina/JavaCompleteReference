@@ -20,7 +20,6 @@ public class AccessControlBasics {
         //These are Ok, a and b may be accessed directly
         ob.a=10;
         ob.b=20;
-
         //This is not OK and will cause an error
         // ob.c= 100;
         //you must access c through its methods

@@ -11,6 +11,8 @@ public class ExploringStringClass {
         String strobj2= "Second string";
         String strobj3= strobj1+ " and " + strobj2;
         String strobj4= strobj3;
+        StringBuilder strobj5= new StringBuilder("Hello");
+        System.out.println(strobj5);
         System.out.println(strobj3);
         boolean ob= strobj3.equals(strobj4);
         //string class methods

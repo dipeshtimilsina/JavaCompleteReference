@@ -24,7 +24,7 @@ class Boxx {
     }
 
     //when the box is a cube
-    Boxx(int c) {
+    Boxx(double c) {
         height = width = length = c;
     }
 
@@ -48,6 +48,12 @@ class BoxWeightt extends Boxx{
        super (w,h,l);
        weight= m;
     }
+
+    //constructor second for BoxWeightt where box is cube
+    BoxWeightt (double a, double m){
+        super(a);
+        weight = m;
+    }
 }
 
 public class SuperKeywordInheritance {
@@ -65,8 +71,13 @@ public class SuperKeywordInheritance {
         System.out.println("The weight of box 2 is "+ box2.weight);
 
 
-        Box box3= new Box(5);
+        Boxx box3= new Boxx(5);
         vol= box3.volume();
         System.out.println("The volume of box 3 is "+ vol);
+
+        BoxWeightt box4= new BoxWeightt(4,2);
+        vol= box4.volume();
+        System.out.println("The volume of box 4 is "+ vol);
+        System.out.println("The weight of box 4 is "+ (int)box4.weight);
     }
 }
